@@ -48,7 +48,7 @@ function connect {
 
     if ([string]::IsNullOrEmpty($ip))
     {
-        Write-Warning "Please enter a IP Address"
+        Write-Warning "Please enter a IP Address."
     }
     
     if (-Not [string]::IsNullOrEmpty($ip) -AND $ip -notmatch "^\\\\")
@@ -63,12 +63,12 @@ function connect {
         #Write-Host "drive check false"
         #Write-Host "IP VAR$ip"
         $drive_letter = (68..90 | %{$L=[char]$_; if ((gdr).Name -notContains $L) {$L}})[0]
-        $cred = Get-Credential -Message "CampusID"
+        $cred = Get-Credential -Message "Credentials"
         New-PSDrive -Persist -Name $drive_letter -Root $ip -PSProvider "FileSystem" -Credential $cred -Scope Global
 
         if ($? -eq $true)
         {
-            Write-Host "Connected `nIP: $ip `nLaufwerk: $drive_letter "
+            Write-Host "Connected `nIP: $ip `nDrive: $drive_letter "
 
             $explorer_letter = $drive_letter + ":"
             Invoke-Item "$explorer_letter"
