@@ -26,7 +26,7 @@ $connect.location                = New-Object System.Drawing.Point(24,114)
 $connect.Font                    = 'Microsoft Sans Serif,10'
 
 $ip_text                         = New-Object system.Windows.Forms.Label
-$ip_text.text                    = "IP Adresse eingeben"
+$ip_text.text                    = "Enter IP Address"
 $ip_text.AutoSize                = $true
 $ip_text.width                   = 25
 $ip_text.height                  = 10
