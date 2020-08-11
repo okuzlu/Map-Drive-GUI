@@ -3,7 +3,7 @@
 Powershell GUI to Map Network Drives. 
 
 Next free available Drive Letter will be used.
-Adds automatically "\\" before address if not.
+Adds automatically "\\\" before address if not.
 
 Warns if Drive is already mapped or no Address entered.
 
